@@ -38,10 +38,30 @@
 
 Options for attribute types are: f,d,l,s,c,b -> `float,double,long,short,char,byte`.
 
-### ncap
-  This code will copy the variables into out.cd
+### ncks (Extract, cut, paste, print) 
+  **ncks** Contains several utilities, some of the most important are:
+
+  **Printing** Options: `H->to screen`, `M-> Global data`, `m->variable metadata`, `Q,s,u,d,a`.
+  *Example 1:* Print `H=to screen` `var=myvar` from `var=p2t` (`d=delete`)
+  ```
+     ncks -H -v myvar myfile
+  ```
+  *Example 2:* Print `M=global meta data` `var=myvar` from `var=p2t` (`d=delete`)
+  ```
+     ncks -M -v myvar myfile
+  ```
+  **Copying** Options: `H->to screen`, `M-> Global data`, `m->variable metadata`, `Q,s,u,d,a`.
+  *Example 1:* Copy all in file `in.nc` to `out.nc`
   ```
     ncks in.nc out.nc  
+  ```
+  *Example 2:* Copy variables `var1,var2` from `in.nc` to `out.nc`
+  ```
+    ncks -v var1,var2 in.nc out.nc  
+  ```
+  *Example 3:* Copy all except `var1` from `in.nc` to `out.nc`
+  ```
+    ncks -x -v var1 in.nc out.nc  
   ```
 
 ##  Arithmetic 
