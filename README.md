@@ -42,6 +42,7 @@ Options for attribute types are: f,d,l,s,c,b -> `float,double,long,short,char,by
   **ncks** Contains several utilities, some of the most important are:
 
   **Printing** Options: `H->to screen`, `M-> Global data`, `m->variable metadata`, `Q,s,u,d,a`.
+
   *Example 1:* Print `H=to screen` `var=myvar` from `var=p2t` (`d=delete`)
   ```
      ncks -H -v myvar myfile
@@ -51,6 +52,7 @@ Options for attribute types are: f,d,l,s,c,b -> `float,double,long,short,char,by
      ncks -M -v myvar myfile
   ```
   **Copying** Options: `H->to screen`, `M-> Global data`, `m->variable metadata`, `Q,s,u,d,a`.
+
   *Example 1:* Copy all in file `in.nc` to `out.nc`
   ```
     ncks in.nc out.nc  
